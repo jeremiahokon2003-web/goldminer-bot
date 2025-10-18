@@ -163,7 +163,8 @@ def cust2(message):
 # === ADMIN PANEL ===
 @bot.message_handler(commands=['admin'])
 def admin_panel(message):
-    if message.chat.id != 8275205737
+    if message.chat.id != 8275205737:
+    bot.send_message(message.chat.id, "You are not authorized")
         bot.send_message(message.chat.id, "Access denied ❌")
         return
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
