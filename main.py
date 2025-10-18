@@ -158,21 +158,28 @@ def cust1(message):
 @bot.message_handler(func=lambda m: m.text == "☎️ Customer Service 2")
 def cust2(message):
     bot.send_message(message.chat.id, "📞 Opening chat with Customer Service 2...")
-    bot.send_message(message.chat.id, "👉 Click here: t.me/Goldminer004")
+bot.send_message(message.chat.id, "👉 Click here: t.me/Goldminer004")
 
 # === ADMIN PANEL ===
 @bot.message_handler(commands=['admin'])
 def admin_panel(message):
     if message.chat.id != 8275205737:
-    bot.send_message(message.chat.id, "You are not authorized")
+        bot.send_message(message.chat.id, "You are not authorized")
         bot.send_message(message.chat.id, "Access denied ❌")
         return
+
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     markup.add("💰 Approve Deposit", "❌ Reject Deposit")
     markup.add("💸 Approve Withdrawal", "🚫 Reject Withdrawal")
     markup.add("➕ Add Balance", "➖ Deduct Balance")
     markup.add("👤 View User Info", "🧾 Transaction History")
-    bot.send_message(message.chat.id, "⚙️ *Admin Panel*", parse_mode="Markdown", reply_markup=markup)
+
+    bot.send_message(
+        message.chat.id,
+        "⚙️ *Admin Panel*",
+        parse_mode="Markdown",
+        reply_markup=markup
+    )
 
 print("🤖 Gold Miner Bot running...")
 bot.polling(non_stop=True)
