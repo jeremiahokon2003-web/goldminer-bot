@@ -3,9 +3,9 @@ import telebot
 from telebot import types
 
 # === BOT CONFIG ===
-BOT_TOKEN = 7993651877:AAG54NYdIQi_8B19sR-G_THDpa-CyemRL98
+BOT_TOKEN =  "7993651877:AAG54NYdIQi_8B19sR-G_THDpa-CyemRL98"
 ADMIN_ID = 8275205737
-bot = telebot.TeleBot(7993651877:AAG54NYdIQi_8B19sR-G_THDpa-CyemRL98)
+bot = telebot.TeleBot("7993651877:AAG54NYdIQi_8B19sR-G_THDpa-CyemRL98")
 
 # === USER DATA STORAGE ===
 users = {}
